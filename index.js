@@ -1,28 +1,27 @@
 const express = require('express');
 const app = express();
 
+app.get('/Medical/schedules',function(req,res){
 
-app.get('/medical-center/doctor-list',function(req,res){
-
-     res.send({type:'GET'});
+    res.send({Type : 'GET....'});
 });
 
-app.put('/medical-center/doctor-list',function(req,res){
+app.post('/Medical/schedules',function(req,res){
 
-    res.send({type:'PUT'});
+    res.send({Type : 'POST...'});
 });
 
-app.post('/medical-center/doctor-list',function(req,res){
+app.put('/Medical/schedules',function(req,res){
 
-    res.send({type:'POST'});
+    res.send({Type : 'PUT...'});
 });
 
-app.delete('/medical-center/doctor-list',function(req,res){
+app.delete('/Medical/schedules',function(req,res){
 
-    res.send({type:'DELETE'});
+    res.send({Type : 'DELETE...'});
 });
 
-app.listen(process.env.port || 5000,function(req,res){
-  
-    console.log('Simple API');
+app.listen(process.env.port || 5000, function(req,res){
+   
+    console.log('Listening port.....');
 });
